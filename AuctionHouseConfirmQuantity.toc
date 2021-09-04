@@ -1,0 +1,11 @@
+## Interface: @toc-version-retail@
+## Version: @project-version@
+## Title: AuctionHouseConfirmQuantity
+## Notes: Forces you to confirm when you buy more than 1 item in the default auctionhouse
+## Author: Numy
+## X-Curse-Project-ID: 523554
+## X-Wago-ID: xZKxo36k
+## LoadOnDemand: 1
+## LoadWith: Blizzard_AuctionHouseUI
+
+AuctionHouseConfirmQuantity.lua
