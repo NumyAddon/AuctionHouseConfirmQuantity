@@ -3,7 +3,7 @@
 ## Title: AuctionHouseConfirmQuantity
 ## Notes: Forces you to confirm when you buy more than 1 item in the default auctionhouse
 ## Author: Numy
-## IconTexture: 982414
+## IconTexture: Interface\Addons\AuctionHouseConfirmQuantity\media\icon
 ## X-Curse-Project-ID: 523554
 ## X-Wago-ID: xZKxo36k
 ## LoadOnDemand: 1
