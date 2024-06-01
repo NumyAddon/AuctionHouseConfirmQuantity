@@ -25,7 +25,7 @@ private.CustomStartCommoditiesPurchase = function(self, itemID, quantity, unitPr
     C_AuctionHouse.StartCommoditiesPurchase(itemID, quantity, unitPrice);
 end
 
-if (IsAddOnLoaded('Blizzard_AuctionHouseUI')) then
+if (C_AddOns.IsAddOnLoaded('Blizzard_AuctionHouseUI')) then
     AuctionHouseFrame.StartCommoditiesPurchase = private.CustomStartCommoditiesPurchase
 else
     private.frame = CreateFrame('Frame')
