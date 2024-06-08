@@ -1,5 +1,7 @@
 local _, private = ...
 
+local GetItemInfo = (GetItemInfo or C_Item.GetItemInfo)
+
 private.BuyNow = function(itemID, quantity)
     C_AuctionHouse.ConfirmCommoditiesPurchase(itemID, quantity)
 end
