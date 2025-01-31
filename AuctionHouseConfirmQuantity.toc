@@ -8,5 +8,18 @@
 ## X-Wago-ID: xZKxo36k
 ## LoadOnDemand: 1
 ## LoadWith: Blizzard_AuctionHouseUI
+## Category-enUS: Auctions
+## Category-deDE: Auktionen
+## Category-esES: Subastas
+## Category-esMX: Subastas
+## Category-frFR: Ventes
+## Category-itIT: Aste
+## Category-koKR: 경매
+## Category-ptBR: Leilões
+## Category-ruRU: Лоты
+## Category-zhCN: 拍卖
+## Category-zhTW: 拍賣
+
+libs\LibVersionCheck-1.0\LibVersionCheck-1.0.xml
 
 AuctionHouseConfirmQuantity.lua
