@@ -1,6 +1,7 @@
 ## Interface: @toc-version-retail@
+## Interface-Cata: @toc-version-cata@
 ## Version: @project-version@
-## Title: AuctionHouseConfirmQuantity
+## Title: Auction House - Confirm Quantity
 ## Notes: Forces you to confirm when you buy more than 1 item in the default auctionhouse
 ## Author: Numy
 ## IconTexture: Interface\Addons\AuctionHouseConfirmQuantity\media\icon
