@@ -1,5 +1,6 @@
 ## Interface: @toc-version-retail@
 ## Interface-Cata: @toc-version-cata@
+## Interface-Mists: @toc-version-mists@
 ## Version: @project-version@
 ## Title: Auction House - Confirm Quantity
 ## Notes: Forces you to confirm when you buy more than 1 item in the default auctionhouse
