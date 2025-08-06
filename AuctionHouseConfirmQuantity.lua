@@ -43,12 +43,16 @@ StaticPopupDialogs['AUCTION_HOUSE_CONFIRM_PURCHASE_AMOUNT'] = {
     text = 'You selected to buy %s %s, please confirm this.',
     button1 = 'Confirm',
     button2 = 'Cancel',
+    --- @param popup StaticPopupTemplate
     OnShow = function(popup, data)
-        popup.button1:Disable()
-        MoneyFrame_Update(popup.moneyFrame, data.totalPrice)
+        local button1 = popup.GetButtons and popup:GetButtons()[1] or popup.button1
+        local itemFrame = popup.GetItemFrame and popup:GetItemFrame() or popup.itemFrame
+        local moneyFrame = popup.MoneyFrame or popup.moneyFrame
+
+        button1:Disable()
+        MoneyFrame_Update(moneyFrame, data.totalPrice)
         C_AuctionHouse.StartCommoditiesPurchase(data.itemID, data.count, data.unitPrice);
 
-        local itemFrame = popup.itemFrame
         itemFrame:ClearAllPoints();
         itemFrame:SetPoint('BOTTOM', popup, 'BOTTOM', -60, 80)
     end,
@@ -59,16 +63,21 @@ StaticPopupDialogs['AUCTION_HOUSE_CONFIRM_PURCHASE_AMOUNT'] = {
         editBox:GetParent():Hide()
     end,
     EditBoxOnEnterPressed = function(editBox)
+        --- @type StaticPopupTemplate
         local popup = editBox:GetParent()
-        if popup.button1:IsEnabled() then
+        local button1 = popup.GetButtons and popup:GetButtons()[1] or popup.button1
+        if button1:IsEnabled() then
             StaticPopup_OnClick(popup, 1)
         end
     end,
     EditBoxOnTextChanged = function(editBox, data)
+        --- @type StaticPopupTemplate
+        local popup = editBox:GetParent()
+        local button1 = popup.GetButtons and popup:GetButtons()[1] or popup.button1
         if (editBox:GetText() == data.count .. '') then
-            editBox:GetParent().button1:Enable()
+            button1:Enable()
         else
-            editBox:GetParent().button1:Disable()
+            button1:Disable()
         end
     end,
     hasItemFrame = true,
