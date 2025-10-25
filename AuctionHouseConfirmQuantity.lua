@@ -38,9 +38,6 @@ EventUtil.ContinueOnAddOnLoaded('Blizzard_AuctionHouseUI', function()
             button1:Disable()
             MoneyFrame_Update(moneyFrame, data.totalPrice)
             C_AuctionHouse.StartCommoditiesPurchase(data.itemID, data.count, data.unitPrice);
-
-            itemFrame:ClearAllPoints();
-            itemFrame:SetPoint('BOTTOM', popup, 'BOTTOM', -60, 80)
         end,
         OnAccept = function(popup, data)
             buyNow(data.itemID, data.count)
